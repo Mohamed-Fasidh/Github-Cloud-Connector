@@ -105,11 +105,13 @@ Response:
     "private": false
   }
 ]
-2. Create Issue
+```
+### 2. Create Issue
 
 POST /create-issue
 
 Request:
+``` json 
 
 {
   "owner": "Mohamed-Fasidh",
@@ -125,11 +127,13 @@ Response:
   "state": "open",
   "url": "https://github.com/Mohamed-Fasidh/AI-Market/issues/1"
 }
-3. List Issues
+```
+### 3. List Issues
 
 POST /list-issues
 
 Request:
+``` json
 
 {
   "owner": "Mohamed-Fasidh",
@@ -145,11 +149,13 @@ Response:
     "url": "https://github.com/Mohamed-Fasidh/AI-Market/issues/1"
   }
 ]
-4. Fetch Commits
+```
+### 4. Fetch Commits
 
 POST /commits
 
 Request:
+``` json 
 
 {
   "owner": "Mohamed-Fasidh",
@@ -165,11 +171,13 @@ Response:
     "url": "https://github.com/Mohamed-Fasidh/AI-Market/commit/..."
   }
 ]
-5. Create Pull Request (Bonus)
+```
+### 5. Create Pull Request (Bonus)
 
 POST /create-pr
 
 Request:
+``` json 
 
 {
   "owner": "Mohamed-Fasidh",
