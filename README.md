@@ -119,9 +119,9 @@ Request:
   "title": "Test Issue from API",
   "body": "Created using FastAPI"
 }
-
+```
 Response:
-
+``` json 
 {
   "title": "Test Issue from API",
   "state": "open",
@@ -139,9 +139,9 @@ Request:
   "owner": "Mohamed-Fasidh",
   "repo": "AI-Market"
 }
-
+```
 Response:
-
+``` json 
 [
   {
     "title": "Test Issue from API",
@@ -161,9 +161,9 @@ Request:
   "owner": "Mohamed-Fasidh",
   "repo": "AI-Market"
 }
-
+```
 Response:
-
+``` json 
 [
   {
     "message": "Initial commit",
@@ -187,9 +187,9 @@ Request:
   "base": "main",
   "body": "Adding new feature"
 }
-
+```
 Response:
-
+``` json 
 {
   "title": "New Feature PR",
   "state": "open",
@@ -199,24 +199,34 @@ Response:
 ## Security
 
 GitHub token stored in .env
+
 No hardcoded credentials
+
 Secure header handling
 
 ## Demo
 Issues created via API
+
 Pull requests created via API
+
 Verified in GitHub UI
+
 Tested using Swagger
 
 ## Challenges Faced
 JSON validation errors
+
 Git branch synchronization issues
+
 Pull request history mismatch
 
 ## Improvements (Future Scope)
 OAuth 2.0 authentication
+
 Async API using httpx
+
 Pagination support
+
 Rate limiting
 
 ## Conclusion
