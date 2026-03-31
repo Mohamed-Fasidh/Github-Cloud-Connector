@@ -198,36 +198,39 @@ Response:
 ```
 ## Security
 
-GitHub token stored in .env
+-GitHub token stored in .env
 
-No hardcoded credentials
+-No hardcoded credentials
 
-Secure header handling
+-Secure header handling
 
 ## Demo
-Issues created via API
 
-Pull requests created via API
+-Issues created via API
 
-Verified in GitHub UI
+-Pull requests created via API
 
-Tested using Swagger
+-Verified in GitHub UI
+
+-Tested using Swagger
 
 ## Challenges Faced
-JSON validation errors
 
-Git branch synchronization issues
+-JSON validation errors
 
-Pull request history mismatch
+-Git branch synchronization issues
+
+-Pull request history mismatch
 
 ## Improvements (Future Scope)
-OAuth 2.0 authentication
 
-Async API using httpx
+-OAuth 2.0 authentication
 
-Pagination support
+-Async API using httpx
 
-Rate limiting
+-Pagination support
+
+-Rate limiting
 
 ## Conclusion
 
