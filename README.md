@@ -1,65 +1,97 @@
-## GitHub Cloud Connector (FastAPI)
-# Overview
+# GitHub Cloud Connector (FastAPI)
+
+## Overview
 
 This project is a GitHub Cloud Connector built using FastAPI. It integrates with GitHub REST APIs to perform operations such as fetching repositories, creating issues, listing issues, fetching commits, and creating pull requests.
 
 The project demonstrates external API integration, secure authentication, clean backend architecture, and real-world Git workflows.
 
+---
+
 ## Features
 
-Fetch repositories for a GitHub user
-Create issues in a repository
-List issues from a repository
-Fetch recent commits from a repository
-Create pull requests between branches
-Secure authentication using GitHub Personal Access Token (PAT)
-Clean and modular backend architecture
-Optimized API responses (no raw GitHub payloads)
+- Fetch repositories for a GitHub user  
+- Create issues in a repository  
+- List issues from a repository  
+- Fetch recent commits from a repository  
+- Create pull requests between branches  
+- Secure authentication using GitHub Personal Access Token (PAT)  
+- Clean and modular backend architecture  
+- Optimized API responses (no raw GitHub payloads)  
+
+---
 
 ## Tech Stack
 
-Python
-FastAPI
-Requests
-Pydantic
+- Python  
+- FastAPI  
+- Requests  
+- Pydantic  
+
+---
 
 ## Project Structure
 
+
 app/
- ├── main.py
- ├── config.py
- ├── routes/
- │    └── github_routes.py
- ├── services/
- │    └── github_service.py
- ├── schemas/
- │    └── github_schema.py
+├── main.py
+├── config.py
+├── routes/
+│ └── github_routes.py
+├── services/
+│ └── github_service.py
+├── schemas/
+│ └── github_schema.py
 
-## Setup 
 
-1. Clone Repository
+---
+
+## Setup
+
+### 1. Clone Repository
+
+
 git clone https://github.com/Mohamed-Fasidh/AI-Market.git
-cd AI-Market
-2. Install Dependencies
-pip install -r requirements.txt
-3. Configure Environment Variables
 
-Create a .env file in the root directory:
+cd AI-Market
+
+
+### 2. Install Dependencies
+
+
+pip install -r requirements.txt
+
+
+### 3. Configure Environment Variables
+
+Create a `.env` file:
+
 
 GITHUB_TOKEN=your_personal_access_token
-4. Run the Application
+
+
+### 4. Run the Application
+
+
 uvicorn app.main:app --reload
-5. Access API Documentation
+
+
+### 5. Access API Docs
+
+
 http://127.0.0.1:8000/docs
+
+
+---
 
 ## API Endpoints
 
-1. Fetch Repositories
+### 1. Fetch Repositories
 
-POST /repos
+POST `/repos`
 
-Request:
-
+**Request:**
+```json
 {
   "username": "Mohamed-Fasidh"
 }
@@ -69,7 +101,7 @@ Response:
 [
   {
     "name": "AI-Market",
-    "url": "https://github.com/...",
+    "url": "https://github.com/Mohamed-Fasidh/AI-Market",
     "private": false
   }
 ]
@@ -91,7 +123,7 @@ Response:
 {
   "title": "Test Issue from API",
   "state": "open",
-  "url": "https://github.com/..."
+  "url": "https://github.com/Mohamed-Fasidh/AI-Market/issues/1"
 }
 3. List Issues
 
@@ -110,7 +142,7 @@ Response:
   {
     "title": "Test Issue from API",
     "state": "open",
-    "url": "https://github.com/..."
+    "url": "https://github.com/Mohamed-Fasidh/AI-Market/issues/1"
   }
 ]
 4. Fetch Commits
@@ -128,9 +160,9 @@ Response:
 
 [
   {
-    "message": "commit message",
-    "author": "author name",
-    "url": "https://github.com/..."
+    "message": "Initial commit",
+    "author": "Mohamed Fasidh",
+    "url": "https://github.com/Mohamed-Fasidh/AI-Market/commit/..."
   }
 ]
 5. Create Pull Request (Bonus)
@@ -153,32 +185,32 @@ Response:
 {
   "title": "New Feature PR",
   "state": "open",
-  "url": "https://github.com/..."
+  "url": "https://github.com/Mohamed-Fasidh/AI-Market/pull/3"
 }
+```
 ## Security
 
-GitHub Personal Access Token is stored in .env
-No sensitive data is hardcoded
-Headers handled securely
-Demo
-Successfully created issues via API
-Successfully created pull requests via API
-Verified real-time updates in GitHub UI
-Tested using FastAPI Swagger UI
+GitHub token stored in .env
+No hardcoded credentials
+Secure header handling
+
+## Demo
+Issues created via API
+Pull requests created via API
+Verified in GitHub UI
+Tested using Swagger
 
 ## Challenges Faced
-
-JSON validation errors in request handling
+JSON validation errors
 Git branch synchronization issues
-Pull request creation constraints (branch history mismatch)
+Pull request history mismatch
 
 ## Improvements (Future Scope)
-
 OAuth 2.0 authentication
-Async API calls using httpx
-Pagination support for large data
-Rate limiting and retry mechanisms
+Async API using httpx
+Pagination support
+Rate limiting
 
 ## Conclusion
 
-This project demonstrates backend engineering skills including API integration, authentication, structured code design, error handling, and real-world Git operations using FastAPI.
+This project demonstrates backend engineering skills including API integration, authentication, structured design, error handling, and Git workflows using FastAPI.
