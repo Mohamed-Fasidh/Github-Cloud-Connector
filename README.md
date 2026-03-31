@@ -95,9 +95,9 @@ POST `/repos`
 {
   "username": "Mohamed-Fasidh"
 }
-
+```
 Response:
-
+``` json 
 [
   {
     "name": "AI-Market",
